@@ -1,0 +1,34 @@
+﻿@{
+    ViewBag.Title = "Редактировать рецепт";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model CookBook.Models.Recipe
+
+@using (Html.BeginForm("Edit", "DB", FormMethod.Post))
+{
+<fieldset style="background: #efd0aa">
+    @Html.HiddenFor(m => m.Id)
+    <p>
+        @Html.LabelFor(m => m.Title, "Название рецепта")
+        <br />
+        @Html.EditorFor(m => m.Title)
+    </p>
+    <p>
+        @Html.LabelFor(m => m.Author, "Автор")
+        <br />
+        @Html.EditorFor(m => m.Author)
+
+    </p>
+    <p>
+        @Html.LabelFor(m => m.RecipeDesc, "Описание")
+        <br />
+        @Html.TextAreaFor(m => m.RecipeDesc)
+    </p>
+    <p>
+        @Html.LabelFor(m => m.Content, "Описание")
+        <br />
+        @Html.TextAreaFor(m => m.Content)
+    </p>
+    <p><input type="submit" value="Отправить" /></p>
+</fieldset>
+}

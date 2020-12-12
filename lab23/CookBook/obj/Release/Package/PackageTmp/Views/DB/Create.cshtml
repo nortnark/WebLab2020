@@ -1,0 +1,28 @@
+﻿@{
+    ViewBag.Title = "Добавление нового рецепта";
+}
+
+@model CookBook.Models.Recipe
+
+<h2>Новый рецепт</h2>
+
+<div>
+    <form method="post" action="/DB/Create" enctype="multipart/form-data">
+        <p>
+            Название рецепта:
+            <input type="text" name="Title" size="15" maxlength="30" />
+        </p>
+        <p>
+            Автор:
+            <input type="text" name="Author" size="15" maxlength="30" />
+        </p>
+        <p>Краткое описание рецепта: </p>
+        <textarea name="RecipeDesc" cols="100" rows="4">Введите текст...</textarea>
+        <p>Описание рецепта: </p>
+        <textarea name="Content" cols="100" rows="20">Введите текст...</textarea>
+        @*<p>Загрузить изображение: </p>
+        <input type="file" name="Img" /><br />*@
+
+        <p><input type="submit" value="Отправить" /></p>
+    </form>
+    </div>

@@ -1,0 +1,51 @@
+body {
+	padding: 10px;
+	font-family: cursive;
+	background-color: #f7e9d5;
+}
+form {
+	border: 1px solid #097066;
+	font-family: inherit;
+	padding: inherit;
+	width: 400px;
+	background-color: #eafaea;
+	position: relative;
+	margin: auto; 
+}
+
+label {
+	font-family: inherit;
+	color: #0d563d;
+}
+
+#sub {
+	cursor: pointer;
+	color: #095d40;
+    font-family: inherit;
+    background: #daf3eb;
+    border-color: #058458;
+    border: inherit;
+}
+
+#input {
+	border: inherit;
+	font-family: inherit;
+}
+
+#congrat {
+	cursor: pointer;
+	border: 1px solid #097066;
+	padding: inherit;
+	background-color: #eafaea;
+	font-family: inherit;
+	color: #0d563d; 
+	display: block;
+	margin:0 auto; 
+}
+
+img {
+	margin: auto;
+	display: block;
+	height: auto;
+    width: 400px;
+}

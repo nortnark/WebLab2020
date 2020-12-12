@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewBag.Title = "Просмотр рецепта";
+}
+
+@model CookBook.Models.Recipe
+<div style="        background: #efd0aa; padding: 5px 10px 5px 10px;">
+    <img class="img-thumbnail" src="@Model.Img" alt="@Model.Title" width="300" />
+    <h2>@Html.DisplayFor(m => m.Title)</h2>
+    <h4>@Html.DisplayFor(m => m.Author)</h4>
+    <p>@Html.DisplayFor(m => m.RecipeDesc)</p>
+    <h3>Порядок приготовления:</h3>
+    <p>@Html.DisplayFor(m => m.Content)</p>
+    <br /><br />
+    <h6>Последнее обновление:</h6>
+    <h6>@Html.DisplayFor(m => m.Date)</h6>
+    <td><p><a class="btn-warning" href="/DB/Delete/@Model.Id">Удалить</a></p></td>
+    <td><p><a class="btn-warning" href="/DB/Edit/@Model.Id">Изменить</a></p></td>
+</div>

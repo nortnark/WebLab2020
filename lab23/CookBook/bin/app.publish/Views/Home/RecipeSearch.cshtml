@@ -1,0 +1,20 @@
+﻿@model IEnumerable<CookBook.Models.Recipe>
+
+
+<div id="searchresults">
+    <h3>Все рецепты автора : @Model.First().Author</h3>
+    @foreach (var recipe in Model)
+    {
+        <div class="col-lg-" style="background: #efd0aa; padding: 5px 10px 5px 10px; margin: 1px 1px 1px 1px;">
+
+            <img class="img-thumbnail" src="@recipe.Img" alt="@recipe.Title" name="@recipe.Title" width="300" />
+            <h2>@recipe.Title</h2>
+            <p>@recipe.Author</p>
+            <p>@recipe.RecipeDesc</p>
+            <p><a class="btn-warning" href="/Home/Show/@recipe.Id">Подробнее</a></p>
+        </div>
+    }
+</div>
+@section Footer {
+    
+}
